@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'StarWars';
+    src: url('../fonts/starjedi/Starjedi.ttf');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 2em;
+    overflow: hidden;
+    font-family: 'StarWars';
+}
+
+.page-wrapper {
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+.page-wrapper>h4 {
+    color: black;
+    font-size: 3em;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    margin: 0;
+}
+
+/* h4:hover {
+    color: #11FF77;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+} */
+
+.select-spaceship {
+    font-size: 0.8em;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.select-spaceship > .spaceships {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.select-spaceship a {
+    margin: 10px;
+    padding: 20px;
+    border: 5px solid white;
+}
+
+.select-spaceship a:hover {
+    border-color: #11FF77;
+}
+
+.select-spaceship .spaceship {
+    position: relative;
+}
+
+.spaceship {
+    position: absolute;
+    z-index: 2;
+    font-size: 1px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.spaceship img {
+    max-width: 50px;
+    z-index: 2;
+}
+
+.spaceship.xw::before, .spaceship.xw::after {
+    content:'';
+    width: 4px;
+    height: 10px;
+    background-color: #11FF77;
+    position: absolute;
+    bottom: -8px;
+    z-index: -1;
+    left: 15.6px;
+    border-radius: 50%;
+    -webkit-animation: laser 1.5s ease-in-out infinite;
+    -moz-animation: laser 1.5s ease-in-out infinite;
+    animation: laser 1.5s ease-in-out infinite;
+}
+
+.spaceship.xw::after {
+    left: auto;
+    right: 15.6px;
+}
+
+.spaceship.mf::before {
+    content:'';
+    width: 45px;
+    height: 25px;
+    background-color: #11FF77;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -1px;
+    z-index: -1;
+    left: 2px;
+    -webkit-animation: laser 1.5s ease-in-out infinite;
+    -moz-animation: laser 1.5s ease-in-out infinite;
+    animation: laser 1.5s ease-in-out infinite;
+}
+
+.laser {
+    width: 2px;
+    height: 20px;
+    background-color: #115C77;
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    -webkit-animation: laser 1.5s ease-in-out infinite;
+    -moz-animation: laser 1.5s ease-in-out infinite;
+    animation: laser 1.5s ease-in-out infinite;
+}
+
+.laser.imperial {
+    background-color: red;
+}
+
+.score {
+    color: white;
+    background-color: #fff3;
+    font-size: 18px;
+    position: absolute;
+    padding: 15px;
+    text-align: center;
+    right: 15px;
+    top: 15px;
+}
+
+
+
+/* NEON TELA */
+/*glow for webkit*/
+@-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #11FF77, 0 0 70px #11FF77, 0 0 80px #11FF77, 0 0 100px #11FF77, 0 0 150px #11FF77;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #11FF77, 0 0 35px #11FF77, 0 0 40px #11FF77, 0 0 50px #11FF77, 0 0 75px #11FF77;
+    }
+  }
+  /*glow for mozilla*/
+  @-moz-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #11FF77, 0 0 70px #11FF77, 0 0 80px #11FF77, 0 0 100px #11FF77, 0 0 150px #11FF77;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #11FF77, 0 0 35px #11FF77, 0 0 40px #11FF77, 0 0 50px #11FF77, 0 0 75px #11FF77;
+    }
+  }
+  /*glow*/
+  @keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #11FF77, 0 0 70px #11FF77, 0 0 80px #11FF77, 0 0 100px #11FF77, 0 0 150px #11FF77;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #11FF77, 0 0 35px #11FF77, 0 0 40px #11FF77, 0 0 50px #11FF77, 0 0 75px #11FF77;
+    }
+}
+
+/* NEON PROPULSORES DAS NAVES */
+
+/*glow for webkit*/
+@-webkit-keyframes laser {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #11FF77, 0 0 70px #11FF77, 0 0 80px #11FF77, 0 0 100px #11FF77, 0 0 150px #11FF77;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #11FF77, 0 0 35px #11FF77, 0 0 40px #11FF77, 0 0 50px #11FF77, 0 0 75px #11FF77;
+    }
+  }
+  /*glow for mozilla*/
+  @-moz-keyframes laser {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #11FF77, 0 0 70px #11FF77, 0 0 80px #11FF77, 0 0 100px #11FF77, 0 0 150px #11FF77;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #11FF77, 0 0 35px #11FF77, 0 0 40px #11FF77, 0 0 50px #11FF77, 0 0 75px #11FF77;
+    }
+  }
+  /*glow*/
+  @keyframes laser {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #11FF77, 0 0 70px #11FF77, 0 0 80px #11FF77, 0 0 100px #11FF77, 0 0 150px #11FF77;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #11FF77, 0 0 35px #11FF77, 0 0 40px #11FF77, 0 0 50px #11FF77, 0 0 75px #11FF77;
+    }
+}
