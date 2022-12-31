@@ -10,16 +10,13 @@ Tecnologias Utilizadas:
 
 ## Executar / Rodar o Projeto
 
-<p>
-1-) Efetue o download do projeto ou clone o repositório para sua máquina;
-2-) Abra o arquivo 'index.html' e o jogo será executado. 
-</p><br>
+1-) Efetue o download do projeto ou clone o repositório para sua máquina;<br>
+2-) Abra o arquivo 'index.html' e o jogo será executado. <br>
 
 ## Como Jogar / Controles do Jogo
 
-<p>
 Teclas:
-**DIREITA e ESQUERDA** = Movem a espaçonave;
-**BARRA DE ESPAÇO** = Atirar;
-**PAUSE** = Pausa o jogo. 
-</p>
+**DIREITA e ESQUERDA** = Movem a espaçonave;<br>
+**BARRA DE ESPAÇO** = Atirar;<br>
+**PAUSE** = Pausa o jogo.
+
