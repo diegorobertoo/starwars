@@ -15,7 +15,7 @@ Tecnologias Utilizadas:
 
 ## Como Jogar / Controles do Jogo
 
-Teclas:
+Teclas:<br>
 **DIREITA e ESQUERDA** = Movem a espaçonave;<br>
 **BARRA DE ESPAÇO** = Atirar;<br>
 **PAUSE** = Pausa o jogo.
